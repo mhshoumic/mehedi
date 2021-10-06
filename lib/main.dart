@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mehedi/pages/homepage.dart';
 
 void main() {
   runApp(august());
@@ -10,19 +11,7 @@ class august extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Material(
-        child: Center(
-          child: Container(
-            child: Text(
-              "My name is mehedi",
-              style: TextStyle(
-                  fontSize: 40,
-                  color: Colors.pink,
-                  backgroundColor: Colors.blue),
-            ),
-          ),
-        ),
-      ),
+      home: Homepage(),
     );
   }
 }
