@@ -13,9 +13,12 @@ class Homepage extends StatelessWidget {
       body: Center(
         child: Container(
           child: Text(
-            "My name is mehedi",
+            "My name is Mehedi",
             style: TextStyle(
-                fontSize: 40, color: Colors.pink, backgroundColor: Colors.blue),
+              fontSize: 40,
+              color: Colors.red,
+              backgroundColor: Colors.black,
+            ),
           ),
         ),
       ),
