@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mehedi/pages/routes.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -48,6 +49,17 @@ class LoginPage extends StatelessWidget {
           ),
           const SizedBox(
             height: 20,
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, MyRoutes.homeRoute);
+            },
+            child: Text("Login"),
+            style: TextButton.styleFrom(
+                backgroundColor: Colors.red, minimumSize: const Size(100, 40)),
+          ),
+          const SizedBox(
+            height: 30,
           ),
           const Text("Forget Password?"),
         ],

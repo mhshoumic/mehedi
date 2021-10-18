@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mehedi/pages/homepage.dart';
 import 'package:mehedi/pages/loginpage.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mehedi/pages/routes.dart';
 
 void main() {
   runApp(const AuGust());
@@ -21,8 +22,8 @@ class AuGust extends StatelessWidget {
       initialRoute: "/login",
       routes: {
         "/": (context) => LoginPage(),
-        "/home": (context) => Homepage(),
-        "/login": (context) => LoginPage(),
+        MyRoutes.homeRoute: (context) => Homepage(),
+        MyRoutes.loginRoute: (context) => LoginPage(),
       },
     );
   }
