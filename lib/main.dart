@@ -8,9 +8,14 @@ void main() {
   runApp(const AuGust());
 }
 
-class AuGust extends StatelessWidget {
+class AuGust extends StatefulWidget {
   const AuGust({Key? key}) : super(key: key);
 
+  @override
+  State<AuGust> createState() => _AuGustState();
+}
+
+class _AuGustState extends State<AuGust> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

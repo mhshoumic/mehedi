@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:mehedi/pages/routes.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  String name = "null";
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -19,7 +25,7 @@ class LoginPage extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          const Text("Creative BD",
+          Text("Creative BD $name",
               style: TextStyle(
                   fontSize: 20,
                   color: Colors.red,
@@ -36,6 +42,10 @@ class LoginPage extends StatelessWidget {
                     hintText: "Enter your user ID",
                     labelText: "User ID",
                   ),
+                  onChanged: (value) {
+                    name = value;
+                    setState(() {});
+                  },
                 ),
                 TextFormField(
                   obscureText: true,
@@ -50,14 +60,32 @@ class LoginPage extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          ElevatedButton(
-            onPressed: () {
+          InkWell(
+            onTap: () {
               Navigator.pushNamed(context, MyRoutes.homeRoute);
             },
-            child: Text("Login"),
-            style: TextButton.styleFrom(
-                backgroundColor: Colors.red, minimumSize: const Size(100, 40)),
+            child: Container(
+              width: 100,
+              height: 50,
+              alignment: Alignment.center,
+              child: Text(
+                "Login",
+                style: TextStyle(color: Colors.white),
+              ),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+                color: Colors.deepPurple,
+              ),
+            ),
           ),
+          // ElevatedButton(
+          //   onPressed: () {
+          //     Navigator.pushNamed(context, MyRoutes.homeRoute);
+          //   },
+          //   child: Text("Login"),
+          //   style: TextButton.styleFrom(
+          //       backgroundColor: Colors.red, minimumSize: const Size(100, 40)),
+          // ),
           const SizedBox(
             height: 30,
           ),
