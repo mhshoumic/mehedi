@@ -19,6 +19,7 @@ class _AuGustState extends State<AuGust> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.light,
       theme: ThemeData(
           primarySwatch: Colors.deepOrange,
