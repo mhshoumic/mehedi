@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mehedi/pages/routes.dart';
+import 'package:mehedi/widgets/drawer.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -30,7 +31,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
+      drawer: MyDrawer(),
       appBar: AppBar(
         title: Center(child: Text("Input your UserID & Password")),
       ),
@@ -68,16 +69,16 @@ class _LoginPageState extends State<LoginPage> {
                           hintText: "Enter your user ID",
                           labelText: "User ID",
                         ),
-                        validator: (value) {
-                          if (value!.isEmpty) {
-                            return "User name is Empty";
-                          }
-                          return null;
-                        },
-                        onChanged: (value) {
-                          name = value;
-                          setState(() {});
-                        },
+                        // validator: (value) {
+                        //   if (value!.isEmpty) {
+                        //     return "User name is Empty";
+                        //   }
+                        //   return null;
+                        // },
+                        // onChanged: (value) {
+                        //   name = value;
+                        //   setState(() {});
+                        // },
                       ),
                       TextFormField(
                         obscureText: true,
@@ -85,12 +86,12 @@ class _LoginPageState extends State<LoginPage> {
                           hintText: "Enter your Password",
                           labelText: "Password",
                         ),
-                        validator: (value) {
-                          if (value!.isEmpty) {
-                            return "Password is Empty";
-                          }
-                          return null;
-                        },
+                        // validator: (value) {
+                        //   if (value!.isEmpty) {
+                        //     return "Password is Empty";
+                        //   }
+                        //   return null;
+                        // },
                       ),
                     ],
                   ),

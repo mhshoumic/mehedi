@@ -3,6 +3,7 @@ import 'package:mehedi/pages/homepage.dart';
 import 'package:mehedi/pages/loginpage.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mehedi/pages/routes.dart';
+import 'package:mehedi/widgets/Themes.dart';
 
 void main() {
   runApp(const AuGust());
@@ -21,13 +22,10 @@ class _AuGustState extends State<AuGust> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.light,
-      theme: ThemeData(
-          primarySwatch: Colors.deepOrange,
-          primaryTextTheme: GoogleFonts.aBeeZeeTextTheme()),
-      darkTheme: ThemeData(brightness: Brightness.dark),
+      theme: MyTheme.lightTheme(context),
+      darkTheme: MyTheme.darkTheme(context),
       initialRoute: "/login",
       routes: {
-        "/": (context) => LoginPage(),
         MyRoutes.homeRoute: (context) => Homepage(),
         MyRoutes.loginRoute: (context) => LoginPage(),
       },
